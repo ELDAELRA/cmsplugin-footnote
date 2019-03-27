@@ -1,7 +1,7 @@
-{% load sekizai_tags %}
+{% load static sekizai_tags %}
 
 {% addtoblock 'css' %}
-  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/cmsplugin-footnote.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/cmsplugin-footnote.css' %}" />
 {% endaddtoblock %}
 
 {% spaceless %}
@@ -12,9 +12,9 @@
         {% for footnote_plugin in footnotes %}
 
           {% with counter=forloop.counter %}
-            <tr class="footnote" id="{{ placeholder_name }}_footnote_{{ counter }}">
+            <tr class="footnote" id="footnote_{{ counter }}">
               <td class="footnote-symbol">
-                <a href="#{{ placeholder_name }}_footnote_{{ counter }}_symbol">
+                <a href="#footnote_{{ counter }}_symbol">
                   {{ footnote_plugin.symbol|default:counter }}.
                 </a>
               </td>

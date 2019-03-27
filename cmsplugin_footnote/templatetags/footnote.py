@@ -12,5 +12,5 @@ def footnote_list(context, page=None):
     request = context['request']
     if page is None:
         page = request.current_page
-    context['footnotes'] = get_footnotes_for_page(request, page)
+    context['footnotes'] = get_footnotes_for_page(request, page=page)
     return context

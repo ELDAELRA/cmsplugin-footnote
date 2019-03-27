@@ -25,8 +25,9 @@ setup(
     license='BSD',
     packages=find_packages(),
     install_requires=[
-        'Django >= 1.4',
-        'django-CMS >= 2.3',
+        'Django >= 1.10',
+        'django-CMS >= 3.4.5',
+        'djangocms-text-ckeditor >= 3.3.0'
     ],
     include_package_data=True,
     zip_safe=False,

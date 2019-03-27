@@ -1,7 +1,13 @@
+{% load static %}
 {% spaceless %}
-  <sup  id="{{ placeholder_name }}_footnote_{{ counter }}_symbol"
+  <sup  id="footnote_{{ counter }}_symbol"
         class="footnote-symbol">
-    <a href="#{{ placeholder_name }}_footnote_{{ counter }}"
-    >{{ object.symbol|default:counter }}</a>
+    <a href="#footnote_{{ counter }}">
+        {% if object.symbol %}
+            {{ object.symbol }}
+        {% else %}
+            <img src="{% static 'icons/footnote_symbol.png' %}" alt="footnote_symbol">
+        {% endif %}
+    </a>
   </sup>
 {% endspaceless %}

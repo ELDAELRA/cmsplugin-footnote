@@ -1,9 +1,6 @@
 # coding: utf-8
 
-try:
-    from cms.plugins.text.models import AbstractText
-except ImportError:
-    from djangocms_text_ckeditor.models import AbstractText
+from djangocms_text_ckeditor.models import AbstractText
 from django.db.models import CharField
 from django.utils.translation import ugettext_lazy as _
 
